@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="04" author="chary">
+    <createTable tableName="borrow">
+        <column  name="id"  type="int"  autoIncrement="true">
+            <constraints  primaryKey="true"  nullable="false"/>
+        </column>
+        <column  name="copy_id"  type="int">
+            <constraints  nullable="false"/>
+        </column>
+        <column  name="borrower_id"  type="int" >
+            <constraints  nullable="false" />
+        </column>
+        <column name="borrow_date" type="date">
+            <constraints nullable="false"/>
+        </column>
+        <column name="return_date" type="date">
+            <constraints nullable="true"/>
+        </column>
+    </createTable>
+    <addForeignKeyConstraint baseColumnNames="copy_id" baseTableName="borrow"
+                                 constraintName="fk_cpy" referencedColumnNames="id"
+                                 referencedTableName="copy" onDelete="CASCADE"/>
+    <addForeignKeyConstraint baseColumnNames="borrower_id" baseTableName="borrow"
+                                 constraintName="fk_borrower" referencedColumnNames="id"
+                                 referencedTableName="borrower" onDelete="CASCADE"/>
+    </changeSet>
+</databaseChangeLog>

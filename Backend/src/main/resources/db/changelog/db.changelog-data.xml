@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="06" author="admin">
+        <insert tableName="book">
+            <column name="title" value="Titre 1"/>
+            <column name="author" value="Auteur 1"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 1"/>
+            <column name="description" value="Description du livre 1"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+        <insert tableName="book">
+            <column name="title" value="Titre 2"/>
+            <column name="author" value="Auteur 2"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 2"/>
+            <column name="description" value="Description du livre 2"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+        <insert tableName="book">
+            <column name="title" value="Titre 3"/>
+            <column name="author" value="Auteur 3"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 3"/>
+            <column name="description" value="Description du livre 3"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+        <insert tableName="book">
+            <column name="title" value="Titre 4"/>
+            <column name="author" value="Auteur 4"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 4"/>
+            <column name="description" value="Description du livre 4"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+        <insert tableName="book">
+            <column name="title" value="Titre 5"/>
+            <column name="author" value="Auteur 5"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 5 "/>
+            <column name="description" value="Description du livre 5"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+        <insert tableName="book">
+            <column name="title" value="Titre 6"/>
+            <column name="author" value="Auteur 6"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 6"/>
+            <column name="description" value="Description du livre 6"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+        <insert tableName="book">
+            <column name="title" value="Titre 7"/>
+            <column name="author" value="Auteur 7"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 7"/>
+            <column name="description" value="Description du livre 7"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+        <insert tableName="book">
+            <column name="title" value="Titre 8"/>
+            <column name="author" value="Auteur 8"/>
+            <column name="published_date" value="2023-07-31"/>
+            <column name="publisher" value="Editeur 8"/>
+            <column name="description" value="Description du livre 8"/>
+            <column name="industry_identifiers" value="ISBN-123456"/>
+        </insert>
+
+
+        <insert tableName="borrower">
+            <column name="first_name" value="John"/>
+            <column name="last_name" value="Doe"/>
+            <column name="phone" value="1234567890"/>
+            <column name="email" value="test@oui.fr"/>
+        </insert>
+        <insert tableName="borrower">
+            <column name="first_name" value="Jane"/>
+            <column name="last_name" value="Doe"/>
+            <column name="phone" value="1234567890"/>
+            <column name="email" value="test@ouie.fr"/>
+        </insert>
+        <insert tableName="borrower">
+            <column name="first_name" value="MR"/>
+            <column name="last_name" value="X"/>
+            <column name="phone" value="1234567890"/>
+            <column name="email" value="teszt@oui.fr"/>
+        </insert>
+
+        <insert tableName="copy">
+            <column name="book_id" value="1"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="2"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="3"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="4"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="5"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="6"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="6"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="5"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="5"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="7"/>
+            <column name="availability" value="true"/>
+        </insert>
+        <insert tableName="copy">
+            <column name="book_id" value="8"/>
+            <column name="availability" value="true"/>
+        </insert>
+
+        <insert tableName="borrow">
+            <column name="copy_id" value="1"/>
+            <column name="borrower_id" value="1"/>
+            <column name="borrow_date" value="2023-07-31"/>
+            <column name="return_date" value="2023-08-15"/>
+        </insert>
+        <insert tableName="borrow">
+            <column name="copy_id" value="2"/>
+            <column name="borrower_id" value="1"/>
+            <column name="borrow_date" value="2023-07-31"/>
+            <column name="return_date" value="2023-08-15"/>
+        </insert>
+        <insert tableName="borrow">
+            <column name="copy_id" value="3"/>
+            <column name="borrower_id" value="2"/>
+            <column name="borrow_date" value="2023-07-31"/>
+            <column name="return_date" value="2023-08-15"/>
+        </insert>
+        <insert tableName="borrow">
+            <column name="copy_id" value="4"/>
+            <column name="borrower_id" value="3"/>
+            <column name="borrow_date" value="2023-07-31"/>
+            <column name="return_date" value="2023-08-15"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="05" author="charly">
+        <createView viewName="bookavailability">
+            SELECT
+                book.id,
+                book.title,
+                book.author,
+                book.published_date,
+                book.publisher,
+                book.description,
+                book.industry_identifiers,
+                SUM(CASE WHEN copy.availability = true THEN 1 ELSE 0 END) AS nb_available,
+                (SELECT COUNT(*) FROM copy WHERE copy.book_id = book.id) AS nb_total
+
+            FROM
+                book
+                    LEFT JOIN copy ON book.id = copy.book_id
+            GROUP BY book.id, book.title, book.author, book.published_date,book.author,book.publisher, book.description, book.industry_identifiers;
+        </createView>
+
+    </changeSet>
+    <changeSet id="createYourTrigger" author="charly">
+        <sqlFile path="/refresh_bookavailability.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+</databaseChangeLog>
