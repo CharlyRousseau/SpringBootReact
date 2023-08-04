@@ -15,7 +15,7 @@ La plateforme permet d'accéder à la liste des livres, leurs disponibilités et
 ## User Story
 
 En tant qu'utilisateur je peux:
-- Ajouter/Supprimer un livre
+- Ajouter/Supprimer un livre et spécifier le nombre de copie souhaitée
 - Acceder au catalogue de la bibliothèque
 - Vérifier la disponibilité d'un livre
 - Créer un emprunt

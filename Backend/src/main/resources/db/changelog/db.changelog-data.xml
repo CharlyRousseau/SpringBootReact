@@ -104,7 +104,7 @@
         </insert>
         <insert tableName="copy">
             <column name="book_id" value="4"/>
-            <column name="availability" value="true"/>
+            <column name="availability" value="false"/>
         </insert>
         <insert tableName="copy">
             <column name="book_id" value="5"/>
@@ -157,7 +157,6 @@
             <column name="copy_id" value="4"/>
             <column name="borrower_id" value="3"/>
             <column name="borrow_date" value="2023-07-31"/>
-            <column name="return_date" value="2023-08-15"/>
         </insert>
     </changeSet>
 </databaseChangeLog>
